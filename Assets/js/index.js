@@ -12,12 +12,13 @@ function route(event) {
     let { pathname } = event.target;
     window.history.pushState({}, "", pathname);
 
-    handleRouteEvent(pathname);
+    handleRouteEvent();
 }
 
-function handleRouteEvent(pathname) {
+function handleRouteEvent() {
     let app = document.querySelector("#app");
-    let route = routes[pathname] || routes['/'];
+    let { pathname } = window.location
+    let route = routes[pathname];
 
     fetch(route)
     .then(data => data.text())
