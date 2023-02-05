@@ -9,11 +9,23 @@ function route(event) {
     event = event || window.event;
     event.preventDefault();
 
-    handleRouteEvent();
+    let { pathname } = event.target;
+    window.history.pushState({}, "", pathname);
+
+    handleRouteEvent(pathname);
 }
 
-function handleRouteEvent() {
+function handleRouteEvent(pathname) {
+    let app = document.querySelector("#app");
+    let route = routes[pathname] || routes['/'];
 
+    fetch(route)
+    .then(data => data.text())
+    .then(html => {
+        app.innerHTML = html;
+    })
 }
+
+handleRouteEvent()
 
 window.route = () => route();
