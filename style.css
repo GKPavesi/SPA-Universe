@@ -9,6 +9,7 @@
 
     --nav-text-color: #C4C4CC;
     --title-color: #E1E1E6;
+    --paragraph-color: #E1E1E6;
     --button-color: #FFFFFF;
     --button-hover-color: #02799D;
 }
@@ -66,7 +67,17 @@ a {
     grid-area: app;
 }
 
-#app h1 {
+#page1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    gap: 2.4rem;
+}
+
+#page1 h1 {
     color: var(--title-color);
 
     font-family: 'Roboto';
@@ -78,7 +89,7 @@ a {
     margin-top: -12.2rem;
 }
 
-#app button {
+#page1 button {
     width: 19.5rem;
     height: 4.8rem;
 
@@ -98,26 +109,52 @@ a {
     transform: scale(1);
 }
 
-#app button:hover {
+#page1 button:hover {
     background: var(--button-color);
     color: var(--button-hover-color);
     transform: scale(1.1);
 }
 
-#page1 {
+#page2,
+#page3 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    gap: 1.6rem;
     height: 100%;
-    gap: 2.4rem;
+
+    width: 50%;
+    padding: 6.3rem 0 0 10.2rem;
 }
 
-/* #page2 {
+#page2 h1,
+#page3 h1 {
+    color: var(--title-color);
 
-} */
+    font-family: 'Roboto';
+
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 125%;
+}
+
+#page2 p,
+#page3 p {
+    color: var(--paragraph-color);
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+/* #page2 h1 {
+    margin-top: 12.2rem;
+}  */
 
 
 /*atentar a todos os detalhes se nao to esquecendo de nada*/
 /*animações no nav!!*/
+/*certificar que esta centralizado ao centro*/
+
+/*rever bem os detalhes de css/*
+/*nao esquecer da pagina de erro*/
