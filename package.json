@@ -1,0 +1,22 @@
+{
+  "name": "2-spa-universe",
+  "version": "1.0.0",
+  "description": "[ENGLISH]</br>\r Single page application using javascript",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GKPavesi/SPA-Universe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GKPavesi/SPA-Universe/issues"
+  },
+  "homepage": "https://github.com/GKPavesi/SPA-Universe#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

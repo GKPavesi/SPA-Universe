@@ -1,53 +1,17 @@
-const routes = {
-    "/": "/Pages/page1.html",
-    "/theuniverse": "/Pages/page2.html",
-    "/exploration": "/Pages/page3.html",
-    404: "/Pages/404.html"
-}
+import { Routes } from "./routes.js";
 
-const backgroundImages = {
-    "/": "/Assets/img/background1.png",
-    "/theuniverse": "/Assets/img/background2.png",
-    "/exploration": "/Assets/img/background3.png",
-    404: "/Assets/img/background1.png"
-}
+const route = new Routes();
 
-function route(event) {
-    event = event || window.event;
-    event.preventDefault();
+route.addRoutes("/", "/Pages/page1.html");
+route.addRoutes("/theuniverse", "/Pages/page2.html");
+route.addRoutes("/exploration", "/Pages/page3.html");
+route.addRoutes(404, "/Pages/404.html");
 
-    let { pathname } = event.target;
-    window.history.pushState({}, "", pathname);
+route.addBackgroundImage("/", "/Assets/img/background1.png");
+route.addBackgroundImage("/theuniverse", "/Assets/img/background2.png");
+route.addBackgroundImage("/exploration", "/Assets/img/background3.png");
+route.addBackgroundImage(404, "/Assets/img/background1.png");
 
-    handleRouteEvent();
-}
+route.handleRouteEvent()
 
-function handleRouteEvent() {
-    let app = document.querySelector("#app");
-    let { pathname } = window.location
-    let route = routes[pathname] || routes[404];
-
-
-    fetch(route)
-        .then(data => data.text())
-        .then(html => {
-            changeBackgroundImage(pathname);
-            app.innerHTML = html;
-        })
-}
-
-function changeBackgroundImage(pathname) {
-    let newImageUrl = backgroundImages[pathname];
-    let body = document.querySelector("body");
-
-    const image = new Image();
-    image.src = newImageUrl;
-
-    image.onload = function () {
-        body.style.backgroundImage = `url(${newImageUrl})`;
-    }
-}
-
-handleRouteEvent()
-
-window.route = () => route();
+window.route = () => route.route();

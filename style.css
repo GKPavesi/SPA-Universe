@@ -67,7 +67,7 @@ a.selected {
     justify-content: center;
     align-items: center;
 
-    height: 100%;
+    height: calc(100% - 12.2rem);
     gap: 2.4rem;
 }
 
@@ -83,12 +83,15 @@ a.selected {
     margin-top: -12.2rem;
 }
 
-#page1 button {
+#page1 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 19.5rem;
     height: 4.8rem;
 
     color: var(--button-color);
-
     background-color: transparent;
 
     border: 0.2rem solid var(--button-color);
@@ -103,7 +106,7 @@ a.selected {
     transform: scale(1);
 }
 
-#page1 button:hover {
+#page1 a:hover {
     background: var(--button-color);
     color: var(--button-hover-color);
     transform: scale(1.1);
@@ -114,9 +117,9 @@ a.selected {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    height: 100%;
+    height: calc(100% - 12.2rem);
 
-    width: 50%;
+    width: 75rem;
     padding: 6.3rem 0 0 10.2rem;
 }
 
@@ -141,10 +144,6 @@ a.selected {
     line-height: 160%;
 }
 
-/* #page2 h1 {
-    margin-top: 12.2rem;
-}  */
-
 
 /*atentar a todos os detalhes se nao to esquecendo de nada*/
 /*animações no nav!!*/
@@ -164,3 +163,12 @@ a.selected {
 /*fazer o body todo dentro do app, encontrei a solução!!!*/
 
 /*observar bem css apos mudanças que eu fiz, tem que ajeitar certinho*/
+
+/*vector bugado, achar solução*/
+
+
+/*verificar nas aulas e no antigo projeto se eu nao esqueci de nada*/
+
+/*refatorar e deixar impecável*/
+
+/*ver se nao tem bugs apos objetificar*/
