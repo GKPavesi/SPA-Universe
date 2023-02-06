@@ -12,10 +12,11 @@
     --paragraph-color: #E1E1E6;
     --button-color: #FFFFFF;
     --button-hover-color: #02799D;
+    --a-selected-color: #FFFFFF;
 }
 
 body {
-    background-image: url(/Assets/img/background1.png);
+    background-image: url();
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -27,18 +28,6 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: "nav" "app";
-}
-
-body.page1 {
-    background-image: url(/Assets/img/background1.png);
-}
-
-body.page2 {
-    background-image: url(/Assets/img/background2.png);
-}
-
-body.page3 {
-    background-image: url(/Assets/img/background3.png);
 }
 
 nav {
@@ -60,6 +49,11 @@ nav {
 a {
     text-decoration: none;
     color: var(--nav-text-color);
+}
+
+a.selected {
+    font-size: 2.22rem;
+    color: var(--a-selected-color);
 }
 
 
@@ -164,3 +158,9 @@ a {
 /*mudar background*/
 /*redirecionamento do botão*/
 /*vector bugado*/
+/*pagina 404*/
+
+
+/*fazer o body todo dentro do app, encontrei a solução!!!*/
+
+/*observar bem css apos mudanças que eu fiz, tem que ajeitar certinho*/
