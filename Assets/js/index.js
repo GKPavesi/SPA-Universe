@@ -10,7 +10,7 @@ route.addRoutes(404, "/Pages/404.html");
 route.addBackgroundImage("/", "/Assets/img/background1.png");
 route.addBackgroundImage("/theuniverse", "/Assets/img/background2.png");
 route.addBackgroundImage("/exploration", "/Assets/img/background3.png");
-route.addBackgroundImage(404, "/Assets/img/background1.png");
+route.addBackgroundImage(404, "/Assets/img/backgrounderror.jpg");
 
 route.handleRouteEvent()
 

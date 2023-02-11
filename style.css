@@ -13,6 +13,7 @@
     --button-color: #FFFFFF;
     --button-hover-color: #02799D;
     --a-selected-color: #FFFFFF;
+    --error-txt-color: #FFFFFF;
 }
 
 body {
@@ -144,6 +145,18 @@ a.selected {
     line-height: 160%;
 }
 
+#pageError {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+#pageError h1 {
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: var(--error-txt-color);
+}
+
 
 /*atentar a todos os detalhes se nao to esquecendo de nada*/
 /*animações no nav!!*/
@@ -172,3 +185,6 @@ a.selected {
 /*refatorar e deixar impecável*/
 
 /*ver se nao tem bugs apos objetificar*/
+
+/*verificar tudo e verificar se nao tem bugs, principalmente depois que eu tentei unir
+duas paginas e desisti depois!!!*/
